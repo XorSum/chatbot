@@ -34,13 +34,6 @@ Widget::~Widget()
 {
     delete ui;
 }
-QString Widget::getMessage()
-{
-    QString msg= ui->messageTextEdit->toHtml();
-    ui->messageTextEdit->clear();
-    ui->messageTextEdit->setFocus();
-    return msg;
-}
 
 void Widget::processPendingDatagrams()
 {
@@ -50,7 +43,7 @@ void Widget::processPendingDatagrams()
         datagram.resize(udpSocket->pendingDatagramSize());
         udpSocket->readDatagram(datagram.data(),datagram.size());
 
-        std::cout<<datagram.data()<<std::endl;//由此可见，能接收消息
+      //  std::cout<<datagram.data()<<std::endl;//由此可见，能接收消息
 
         ui->messageBrowser->setTextColor(Qt::blue);
         ui->messageBrowser->append(datagram.data());
@@ -73,15 +66,20 @@ void Widget::sendMessage()
     ui->messageBrowser->verticalScrollBar()
             ->setValue(ui->messageBrowser->verticalScrollBar()->maximum());
     QString str= ui->messageTextEdit->toPlainText();
-    ui->messageBrowser->setTextColor(Qt::black);
-    ui->messageBrowser->append(str);
 
+    if(color.isValid())
+    {
+        ui->messageTextEdit->setTextColor(color);
+        ui->messageTextEdit->setFocus();
+        ui->messageBrowser->setTextColor(color);
+     }
+    ui->messageBrowser->append(str);
+    //ui->messageBrowser->setTextColor(Qt::black);
     QByteArray  data=ui->messageTextEdit->toPlainText().toUtf8();
     ui->messageTextEdit->clear();
     ui->messageTextEdit->setFocus();
 
     udpSocket->writeDatagram(data,data.length(),remoteaddress, remoteport);
-
 
 }
 
@@ -146,7 +144,7 @@ void Widget::on_colorToolButton_clicked()
     color = QColorDialog::getColor(color,this);
     if(color.isValid())
     {
-       ui->messageTextEdit->setTextColor(color);
+        ui->messageTextEdit->setTextColor(color);
         ui->messageTextEdit->setFocus();
         ui->messageBrowser->setTextColor(color);
      }

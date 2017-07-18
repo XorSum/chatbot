@@ -275,8 +275,7 @@ border-image: url(:/myimages/clear.png);</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">
-color: rgb(136, 138, 133);</string>
+      <string notr="true"/>
      </property>
      <property name="placeholderText">
       <string>在此输入聊天信息</string>
