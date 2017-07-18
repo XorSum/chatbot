@@ -46,6 +46,7 @@ void Widget::processPendingDatagrams()
       //  std::cout<<datagram.data()<<std::endl;//由此可见，能接收消息
 
         ui->messageBrowser->setTextColor(Qt::blue);
+
         ui->messageBrowser->append(datagram.data());
 
 
@@ -66,7 +67,7 @@ void Widget::sendMessage()
     ui->messageBrowser->verticalScrollBar()
             ->setValue(ui->messageBrowser->verticalScrollBar()->maximum());
     QString str= ui->messageTextEdit->toPlainText();
-
+    ui->messageBrowser->setTextColor(Qt::black);
     if(color.isValid())
     {
         ui->messageTextEdit->setTextColor(color);
