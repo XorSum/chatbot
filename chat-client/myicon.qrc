@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/myimages">
+        <file>09140032.png</file>
+        <file>ico.ooopic.com.png</file>
+        <file>underline.png</file>
+        <file>464-font.png</file>
+        <file>clear.png</file>
+    </qresource>
+</RCC>

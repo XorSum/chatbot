@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>607</width>
+    <height>514</height>
+   </rect>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>聊天机器人客户端</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" rowstretch="10,0,0,0">
+   <item row="0" column="0" colspan="3">
+    <widget class="QTextBrowser" name="messageBrowser">
+     <property name="baseSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>Waree</family>
+       <pointsize>14</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+font: 75 14pt &quot;Waree&quot;;
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="placeholderText">
+      <string>欢迎进入本聊天系统</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="3">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QFontComboBox" name="fontComboBox"/>
+     </item>
+     <item>
+      <widget class="QComboBox" name="sizeComboBox">
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>9</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>10</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>11</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>12</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>13</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>14</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>15</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>16</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>17</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>18</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>19</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>20</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>21</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>22</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QToolButton" name="boldToolButton">
+       <property name="toolTip">
+        <string>加粗</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/myimages/09140032.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="italicToolButton">
+       <property name="toolTip">
+        <string>倾斜</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/myimages/464-font.png);
+border-image: url(:/myimages/ico.ooopic.com.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="underlineToolButton">
+       <property name="toolTip">
+        <string>下划线</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/myimages/clear.png);
+border-image: url(:/myimages/underline.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="colorToolButton">
+       <property name="toolTip">
+        <string>更改字体颜色</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/myimages/ico.ooopic.com.png);
+border-image: url(:/myimages/464-font.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="clearToolButton">
+       <property name="toolTip">
+        <string>清空聊天记录</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/myimages/underline.png);
+border-image: url(:/myimages/clear.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0" colspan="3">
+    <widget class="QTextEdit" name="messageTextEdit">
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+color: rgb(136, 138, 133);</string>
+     </property>
+     <property name="placeholderText">
+      <string>在此输入聊天信息</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2">
+    <widget class="QPushButton" name="sendButton">
+     <property name="text">
+      <string>发送(&amp;CTRL+ENTER)</string>
+     </property>
+     <property name="shortcut">
+      <string>Ctrl+Return</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QPushButton" name="exitButton">
+     <property name="text">
+      <string>退出</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
