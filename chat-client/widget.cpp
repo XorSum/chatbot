@@ -163,3 +163,8 @@ void Widget::on_clearToolButton_clicked()
 {
     ui->messageBrowser->clear();
 }
+
+void Widget::on_underlineToolButton_clicked()
+{
+
+}

@@ -54,6 +54,7 @@ private slots:
     //退出
     void on_exitButton_clicked();
     void on_clearToolButton_clicked();
+    void on_underlineToolButton_clicked();
 };
 
 #endif // WIDGET_H
