@@ -34,7 +34,7 @@ Widget::~Widget()
 {
     delete ui;
 }
-
+//接收
 void Widget::processPendingDatagrams()
 {
     while(udpSocket->hasPendingDatagrams())
@@ -42,21 +42,14 @@ void Widget::processPendingDatagrams()
         QByteArray datagram;
         datagram.resize(udpSocket->pendingDatagramSize());
         udpSocket->readDatagram(datagram.data(),datagram.size());
-
-      //  std::cout<<datagram.data()<<std::endl;//由此可见，能接收消息
-
         ui->messageBrowser->setTextColor(Qt::blue);
-
         ui->messageBrowser->append(datagram.data());
-
-
     }
 }
 
-
-void Widget::sendMessage()
+//发送
+void Widget::on_sendButton_clicked()
 {
-
     if(ui->messageTextEdit->toPlainText()=="")
          {
              QMessageBox::warning(0,tr("警告"),
@@ -73,7 +66,7 @@ void Widget::sendMessage()
         ui->messageTextEdit->setTextColor(color);
         ui->messageTextEdit->setFocus();
         ui->messageBrowser->setTextColor(color);
-     }
+    }
     ui->messageBrowser->append(str);
     //ui->messageBrowser->setTextColor(Qt::black);
     QByteArray  data=ui->messageTextEdit->toPlainText().toUtf8();
@@ -82,13 +75,6 @@ void Widget::sendMessage()
 
     udpSocket->writeDatagram(data,data.length(),remoteaddress, remoteport);
 
-}
-
-//发送
-void Widget::on_sendButton_clicked()
-{
-
-    sendMessage();
 
 }
 
